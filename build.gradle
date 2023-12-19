@@ -13,8 +13,6 @@ base {
 
 repositories {
     maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
-    // maven { url "https://jitpack.io" }
-    // flatDir { dirs "libs" }
 }
 
 loom {
@@ -23,8 +21,9 @@ loom {
             options.putAll(["mark-corresponding-synthetics": "1", "ind": "    "])
         }
     }
-    // runs.client.programArgs "--userProperties", "{}"
-    // legacyLooming.setIntermediaryVersion(2)
+    runConfigs.configureEach {
+        ideConfigGenerated = false
+    }
 }
 
 dependencies {
@@ -47,7 +46,6 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-    // withSourcesJar()
 }
 
 jar {

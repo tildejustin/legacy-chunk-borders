@@ -1,10 +1,10 @@
 {
   "required": true,
-  "package": "dev.tildejustin.example.mixin",
+  "package": "dev.tildejustin.chunkborders.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
   "client": [
+    "GameRendererMixin",
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

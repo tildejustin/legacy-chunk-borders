@@ -1,24 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "legacy-chunk-borders",
   "version": "${version}",
-  "name": "",
-  "description": "",
+  "name": "legacy chunk borders",
+  "description": "backport of 1.10 chunk borders",
   "authors": [
     "tildejustin"
   ],
+  "icon": "assets/legacy-chunk-borders/icon.png",
   "contact": {
-    "homepage": "https://modrinth.com/mod/modid",
-    "sources": "https://github.com/tildejustin/modid",
-    "issues": "https://github.com/tildejustin/modid/issues"
+    "homepage": "https://modrinth.com/mod/legacy-chunk-borders",
+    "sources": "https://github.com/tildejustin/legacy-chunk-borders",
+    "issues": "https://github.com/tildejustin/legacy-chunk-borders/issues"
   },
   "license": "MIT",
-  "environment": "*",
+  "environment": "client",
   "mixins": [
-    "modid.mixins.json"
+    "legacy-chunk-borders.mixins.json"
   ],
   "depends": {
-    "minecraft": "*",
-    "fabric-loader": ">=0.15.0"
+    "minecraft": ">=1.8.2 <1.9",
+    "fabricloader": ">=0.15.0"
   }
 }
